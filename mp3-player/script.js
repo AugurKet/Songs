@@ -12,10 +12,10 @@ class GitHubMusicPlayer {
         this.shuffledIndices = [];
         
         // GitHub configuration - UPDATE THESE VALUES!
-        this.githubUsername = 'YOUR_USERNAME'; // Replace with your GitHub username
-        this.githubRepo = 'YOUR_REPO'; // Replace with your repository name
+        this.githubUsername = 'augurket'; // Replace with your GitHub username
+        this.githubRepo = 'Songs'; // Replace with your repository name
         this.githubBranch = 'main'; // or 'master'
-        this.musicFolder = 'music'; // folder where MP3s are stored
+        this.musicFolder = 'mp3-player/music'; // folder where MP3s are stored
         
         this.init();
     }
