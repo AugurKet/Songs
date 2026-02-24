@@ -1,0 +1,108 @@
+/* styles.css - Additional styles for the MP3 player */
+
+/* Custom scrollbar for playlist */
+#playlist::-webkit-scrollbar {
+    width: 6px;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background: rgba(168, 85, 247, 0.5);
+    border-radius: 10px;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.8);
+}
+
+/* Progress bar styling */
+#progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #a855f7;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#progressBar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+#progressBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #a855f7;
+    cursor: pointer;
+    border: none;
+}
+
+#progressBar::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Volume slider styling */
+#volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #a855f7;
+    cursor: pointer;
+}
+
+#volumeControl::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #a855f7;
+    cursor: pointer;
+    border: none;
+}
+
+/* Playlist item hover effect */
+.playlist-item {
+    transition: all 0.2s ease;
+}
+
+.playlist-item:hover {
+    transform: translateX(5px);
+}
+
+/* Album art animation when playing */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.playing {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .control-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    #playPauseBtn {
+        padding: 12px;
+    }
+    
+    #playPauseBtn i {
+        font-size: 1.25rem;
+    }
+}
